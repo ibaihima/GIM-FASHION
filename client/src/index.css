@@ -1,13 +1,337 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.card_container img{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card_container .card_details {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
+
+.cart {
+  height :30px; width :auto;
+  padding-left: 20px;
+}
+.companyName {
+color : #ce7368;
+font-size: 50px;
+}
+.header {
+  align-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.headerRight{
+  display: flex;
+  align-items: center;
+}
+.navlinksContainer{
+  text-align: center;
+  padding: 10px;
+}
+.middle {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.navlinksContainer a{
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-right: 10px;
+  text-decoration: none;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: rgb(14, 14, 14);
+  box-shadow: 4px 7px #252525;
+  border-radius: 6px;
+  align-content: center;
+  text-shadow: 0 0 5px #ce7368, 0 0 80px #ce7368, 0 0 5px #ce7368,0 0 5px #ce7368;
+	color: white;
+	font-size: 25px;
+	text-align: center;
+}
+
+.navbar{
+  padding-right: 500px;
+  padding-top: 10px;
+}
+.middle{
+  text-align: center;
+}
+
+.picsContainer img {
+  height: 650px;
+  width: auto;
+  float: left;
+}
+
+.picsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  position: absolute;
+  margin-top: 200px;
+  font-size: xx-large;
+}
+
+.names {
+  margin-left: 70px;
+}
+
+em {
+  color:  #ce7368;
+}
+
+#loginUser {
+  color: white;
+  padding-right: 20px;
+  font-size: x-large;
+}
+
+body {
+  background-image: url("https://wallpapercave.com/wp/wp2153682.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.scene .card {
+  position: relative;
+  width: 240px;
+  height: 300px;
+  color: white;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+.scene .card:hover {
+  transform: rotateY(0.5turn);
+}
+.scene .card .card__face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: 1s ease-in-out;
+  /* -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4)); */
+}
+.scene .card .card__face img {
+  width: 240px;
+  height: 300px;
+  object-fit: cover;
+}
+.scene .card .card__face--back {
+  transform: rotateY(0.5turn);
+}
+
+/* About Us */
+.about_us_container {
+  display: flex;
+}
+
+#about_us_logo{
+  height: 300px;
+  width: auto;
+}
+
+.about_us_right_side {
+  background-color: white;
+}
+
+.about_us_right_side p{
+  padding: 10px;
+  color: black;
+}
+
+.about_us_right_side h3{
+  padding: 10px;
+  color: black;
+}
+
+.card_details{
+  background-color: rgb(255, 255, 255);
+  inline-size: 240px;
+  margin-top: -15px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.card_details button {
+  width: 60%;
+
+}
+
+.card_details p {
+  font-size: large;
+}
+
+.card_details h2 {
+  font-size: large;
+  margin-bottom: -10px;
+}
+
+.all_cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+
+/*login*/
+form {
+  width: 450px;
+  min-height: 500px;
+  height: auto;
+  border-radius: 5px;
+  margin: 2% auto;
+  box-shadow: 0 9px 50px rgba(234, 177, 149, 0.31);
+  padding: 2%;
+  background-image: ('./assets/logoG.png');
+}
+
+form .con {
+  /* display: -webkit-flex; */
+  /* display: flex; */
+  /* -webkit-justify-content: space-around; */
+  /* justify-content: space-around; */
+  /* -webkit-flex-wrap: wrap; */
+  /* flex-wrap: wrap; */
+  /* margin: 0 auto; */
+}
+
+.con header {
+  /* margin: 2% auto 10% auto; */
+  text-align: center;
+}
+/* Login title form form */
+.con header h2 {
+  font-size: 250%;
+  font-family: 'Playfair Display', serif;
+  color: #3e403f;
+}
+
+.con header p {
+  letter-spacing: 0.05em;
+} 
+/* //////////////////////////////////////////// */
+/* //////////////////////////////////////////// */
+.input-item {
+  background: #fff;
+  color: #333;
+  padding: 14.5px 0px 15px 9px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+/* inputs form */
+input[class="form-input"] {
+  width: 240px;
+  height: 50px;
+  margin-top: 2%;
+  padding: 15px;
+  font-size: 16px;
+  font-family: 'Abel', sans-serif;
+  color: #5e6472;
+  outline: none;
+  border: none;
+  border-radius: 5px 5px 5px 5px;
+  transition: 0.2s linear;
+}
+input[id="txt-input"] {
+  width: 250px;
+}
+/* focus */
+input:focus {
+  transform: translateX(-2px);
+  border-radius: 5px;
+}
+/* //////////////////////////////////////////// */
+/* //////////////////////////////////////////// */
+ input[type="text"] {
+ min-width: 250px;
+}
+
+/* buttons */
+.con button {
+  display: inline-block;
+  color: #252537;
+  width: 280px;
+  height: 50px;
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+  margin: 7% auto;
+  letter-spacing: 0.05em;
+}
+
+
+/* buttons hover */
+button:hover {
+  transform: translatey(3px);
+  box-shadow: none;
+}
+/* buttons hover Animation */
+button:hover {
+  animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+  0% {
+    transform: translateY(3px);
+ }
+  100% {
+    transform: translateY(5px);
+ }
+}
+form {
+  /* background-image: url("/public/assets/logoG.png"); */
+  background-size: cover;
+}
+
+.shoppin_cart_list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.cart_total {
+  color: white;
+}
+
+.horizontal_logo {
+  height: 150px;
+  width: auto;
+}
+
+.con {
+  
+}
+
+div.field-set{
+  width: 100%;
+  opacity: 80%;
+  display: flex;
+  flex-direction: column;
+}
+#username {
+  width: 92%;
+}
+#password {
+  width: 92%;
+}
+.cart_total {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+

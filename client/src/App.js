@@ -35,7 +35,7 @@ function App() {
   
   useEffect(() => {
     if (loginUser.id){
-    fetch(`http://localhost:9292/users/${loginUser.id}`)
+    fetch(`/users/${loginUser.id}`)
         .then(res => res.json())
         .then((userItemsData) => {
             setUserItems(userItemsData)
@@ -49,7 +49,7 @@ function App() {
 
   function handleAddToCart(clickedCloth) {
     if (loginUser.id){
-      fetch(`http://localhost:9292/users/${loginUser.id}`, {
+      fetch(`/users/${loginUser.id}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -71,7 +71,7 @@ function App() {
   
   function handleRemoveFromCart(clickedCloth) {
     if (loginUser.id){
-      fetch(`http://localhost:9292/cloths/${clickedCloth.id}/${loginUser.id}`, {
+      fetch(`/cloths/${clickedCloth.id}/${loginUser.id}`, {
         method: 'DELETE'
       })
       .then(resp=> resp.json())

@@ -49,17 +49,20 @@ function App() {
 
   function handleAddToCart(clickedCloth) {
     if (loginUser.id){
+      console.log(clickedCloth)  
+      console.log(loginUser.id) 
       fetch(`/users/${loginUser.id}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
           user_id: loginUser.id,
-          cloth_id: clickedCloth.id         
+          cloth_id: clickedCloth.id     
          })
       })
       .then(res => res.json())
       .then((addedNewItem) => {
           console.log(userItems)
+          console.log(addedNewItem)
           setUserItems([...userItems, addedNewItem])
       }
       )

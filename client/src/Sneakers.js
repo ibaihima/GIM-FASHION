@@ -5,7 +5,7 @@ function Sneakers( {handleAddToCart} ) {
     const [sneakers, setSneakers] = useState([]);
 
     useEffect(() => {
-        fetch("/cloths/sneakers")
+        fetch("/shoes")
         .then(res => res.json())
         .then((sneakersData) => {
             setSneakers(sneakersData)

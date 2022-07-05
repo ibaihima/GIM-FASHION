@@ -5,7 +5,7 @@ function Bottoms( {handleAddToCart} ) {
     const [bottoms, setBottoms] = useState([]);
 
     useEffect(() => {
-        fetch("/cloths/pants")
+        fetch("/pants")
         .then(res => res.json())
         .then(bottomsData => {
             setBottoms(bottomsData)

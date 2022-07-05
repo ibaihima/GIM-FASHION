@@ -5,7 +5,7 @@ function Sweaters( {handleAddToCart} ) {
     const [sweaters, setSweaters] = useState([]);
 
     useEffect(() => {
-      fetch("/cloths/sweaters")
+      fetch("/sweaters")
       .then(res => res.json())
       .then((sweatersData) => {
           setSweaters(sweatersData)

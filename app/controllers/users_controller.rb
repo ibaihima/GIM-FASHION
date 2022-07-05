@@ -4,7 +4,8 @@ class UsersController < ApplicationController
     end
 
     def show
-        user = User.find_by(id: params[id:])
-        render json: user, status :ok
+        user = User.find_by(id: params[:id])
+        items = user.get_shopping_items
+        render json: items, status: :ok
     end
 end

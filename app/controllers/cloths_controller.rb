@@ -3,6 +3,11 @@ class ClothsController < ApplicationController
         render json: Cloth.all 
     end
 
+    def show
+        cloth = Cloth.find_by(id: params[:id])
+        render json: cloth, status: :ok
+    end
+
     def sweaters
         cloths = Cloth.all.where(category: 'Sweaters')
         render json: cloths, status: :ok
@@ -15,6 +20,8 @@ class ClothsController < ApplicationController
         cloths = Cloth.all.where(category: 'Pants')
         render json: cloths, status: :ok
     end
+
+
 
 
 end

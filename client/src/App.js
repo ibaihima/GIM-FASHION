@@ -51,7 +51,7 @@ function App() {
     if (loginUser.id){
       console.log(clickedCloth)  
       console.log(loginUser.id) 
-      fetch(`/users/${loginUser.id}`, {
+      fetch(`/users`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -79,7 +79,7 @@ function App() {
       })
       .then(resp=> resp.json())
       .then(data=>{
-        const filteredItems = userItems.filter(item => item.id !== data.cloth_id)
+        const filteredItems = userItems.filter(item => item.id !== data.id)
         setUserItems(filteredItems)
       })
     } else{
